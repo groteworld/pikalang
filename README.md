@@ -38,9 +38,9 @@ Usage
 You could also evaluate code from the command line, but it's a little ridiculous
 
 ```
-	pikalang -e "pi pi pi pi pi pika pipi pi pi pi pi pi pi pi pi pi\
-	pichu ka chu pikapi pika pika pipi ka ka pikachu pi pi pipi pi\
-	pichu ka chu pipi pi pikachu ka pipi pika pichu pikachu pipi ka\
+	pikalang -e "pi pi pi pi pi pika pipi pi pi pi pi pi pi pi pi pi \
+	pichu ka chu pikapi pika pika pipi ka ka pikachu pi pi pipi pi \
+	pichu ka chu pipi pi pikachu ka pipi pika pichu pikachu pipi ka \
 	chu pichu pikapi chu"
 ```
 
