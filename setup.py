@@ -8,7 +8,7 @@ from setuptools import setup
 
 setup(
     name="pikalang",
-    version = __version__,
+    version=__version__,
     description="A brainfuck derivative based off the vocabulary of Pikachu.",
     license="MIT",
     keywords="esoteric programming language brainfuck",
