@@ -54,7 +54,7 @@ class PikalangLexer:
 
     def t_error(self, t):
         """Error handling rule."""
-        print "Illegal character '%s'" % t.value[0]
+        print("Illegal character {}".format(t.value[0]))
         t.lexer.skip(1)
 
     def __init__(self, **kwargs):
@@ -94,10 +94,10 @@ def main():
             lexer.load(pikalang_data)
         else:
             parser.print_usage()
-            print 'pikalang: error: file is not a pokeball'
+            print('pikalang: error: file is not a pokeball')
     else:
         parser.print_usage()
-        print 'pikalang: error: file does not exist'
+        print('pikalang: error: file does not exist')
 
 
 if __name__ == '__main__':
