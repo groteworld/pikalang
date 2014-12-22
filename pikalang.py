@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-u"""pikalang.
+"""pikalang.
 
 A brainfuck derivative based off the vocabulary of Pikachu from Pokémon.
 
