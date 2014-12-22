@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 """Pikalang setup script."""
 
-from setuptools import setup
+__version__ = '0.1.0'
 
-from pikalang import __version__
+from setuptools import setup
 
 setup(
     name="pikalang",
-    version=__version__,
+    version = __version__,
     description="A brainfuck derivative based off the vocabulary of Pikachu.",
     license="MIT",
     keywords="esoteric programming language brainfuck",
@@ -16,7 +16,7 @@ setup(
     author_email="hello@grotewold.me",
     url="https://github.com/skj3gg/pikalang",
     py_modules=['pikalang'],
-    install_requires=["setuptools", "ply"],
+    install_requires=['ply'],
     entry_points={
         'console_scripts': [
             'pikalang = pikalang:main',

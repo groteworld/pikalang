@@ -1,8 +1,8 @@
-[pikalang] [1]
+pikalang
 ========
 A [brainfuck] [2] derivative based off the vocabulary of [Pikachu] [3] from [Pokémon] [4].
 
-![pikachu](images/pikachu.gif)
+![pikachu](images/shock.gif)
 
 
 Syntax
@@ -51,7 +51,8 @@ Disclaimer
 ----------
 This is a fan-based parody of themes from [Pokémon] [3]. The language,
 as well as its author, is in no way associated with the Pokémon francise
-and its creators, nor is this project, in any way, for-profit.
+and its creators, nor is this project, in any way, for-profit. This is a
+project to teach myself `ply`. 
 
 [1]: http://esolangs.org/wiki/Pikalang
 [2]: http://en.wikipedia.org/wiki/Brainfuck "Brainfuck"

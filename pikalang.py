@@ -7,7 +7,7 @@ A brainfuck derivative based off the vocabulary of Pikachu from Pokémon.
 Copyright (c) 2014 Blake Grotewold
 """
 
-__version__ = "0.1.0"
+__version__ = '0.1.0'
 
 import os
 import argparse
@@ -68,35 +68,36 @@ class PikalangLexer:
         """
         self.lexer.input(data)
 
-
-lexer = PikalangLexer()
-
 # Next up.... Parse
 
 
 def main():
     """Main entrypoint for application."""
-    parser = argparse.ArgumentParser(
+    arg_parser = argparse.ArgumentParser(
         prog='pikalang',
         description='a Pikalang interpreter written in Python',
         argument_default=argparse.SUPPRESS)
 
-    parser.add_argument('-v', '--version', action='version',
-                        version='%(prog)s {0}'.format(__version__))
-    parser.add_argument('file', help='the path to the pokeball file')
+    arg_parser.add_argument('-v', '--version', action='version',
+                            version='%(prog)s {0}'.format(__version__))
+    arg_parser.add_argument('file', help='the path to the pokeball file')
 
-    args = parser.parse_args()
+    args = arg_parser.parse_args()
 
     if os.path.isfile(args.file):
-        if args.file.split('.')[-1] is 'pokeball':
+        if os.path.splitext(args.file)[1] == '.pokeball':
             with open(args.file, 'r') as pikalang_file:
                 pikalang_data = pikalang_file.read()
+
+            lexer = PikalangLexer()
             lexer.load(pikalang_data)
+
         else:
-            parser.print_usage()
+            arg_parser.print_usage()
             print('pikalang: error: file is not a pokeball')
+
     else:
-        parser.print_usage()
+        arg_parser.print_usage()
         print('pikalang: error: file does not exist')
 
 
