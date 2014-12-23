@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """pikalang.
 
-A brainfuck derivative based off the vocabulary of Pikachu from Pokémon.
+A brainfuck derivative based off the vocabulary of Pikachu from Pokemon.
 
 Copyright (c) 2014 Blake Grotewold
 """
