@@ -52,7 +52,8 @@ Disclaimer
 This is a fan-based parody of themes from [Pokémon] [3]. The language,
 as well as its author, is in no way associated with the Pokémon francise
 and its creators, nor is this project, in any way, for-profit. This is a
-project to teach myself `ply`. 
+project to teach myself `ply`. This project currently only creates a lexer object for the Pikalang file and then exits; full parsing is yet to come.
+
 
 [1]: http://esolangs.org/wiki/Pikalang
 [2]: http://en.wikipedia.org/wiki/Brainfuck "Brainfuck"
