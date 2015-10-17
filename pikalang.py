@@ -15,7 +15,6 @@ import ply.lex as lex
 
 
 class PikalangLexer:
-
     """Token lexer for Pikalang."""
 
     # List of token names
