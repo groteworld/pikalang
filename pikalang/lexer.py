@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-"""pikalang.lexer
+"""pikalang.lexer module.
 
 The lexer for pikalang.
 

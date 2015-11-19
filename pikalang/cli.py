@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-"""pikalang.cli
+"""pikalang.cli module.
 
 Commandline interface to pikalang.
 
