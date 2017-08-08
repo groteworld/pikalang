@@ -17,7 +17,7 @@ from pikalang import __version__
 
 
 def main():
-    """Main entrypoint for application."""
+    """Run application as a CLI executable."""
     arg_parser = argparse.ArgumentParser(
         prog='pikalang',
         description='a Pikalang interpreter written in Python',
