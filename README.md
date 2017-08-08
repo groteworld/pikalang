@@ -1,6 +1,6 @@
 pikalang
 ========
-A [brainfuck] [2] derivative based off the vocabulary of [Pikachu] [3] from [Pokémon] [4].
+A [brainfuck][2] derivative based off the vocabulary of [Pikachu][3] from [Pokémon][4].
 
 ![pikachu](images/shock.gif)
 
@@ -24,22 +24,22 @@ Installation
 ------------
 stable:
 ```shell
-	pip install pikalang
+pip install pikalang
 ```
 
 or bleeding edge...
 ```shell
-	git clone https://github.com/grotewold/pikalang.git
-	cd pikalang
+git clone https://github.com/grotewold/pikalang.git
+cd pikalang
 
-	python setup.py install
+python setup.py install
 ```
 
 
 Usage
 -----
 ```shell
-	pikalang path/to/file.pokeball
+pikalang path/to/file.pokeball
 ```
 
 
@@ -50,7 +50,7 @@ A pikalang program must be stored in a file with a `.pokeball` extention
 
 Disclaimer
 ----------
-This is a fan-based parody of themes from [Pokémon] [3]. The language,
+This is a fan-based parody of themes from [Pokémon][3]. The language,
 as well as its author, is in no way associated with the Pokémon francise
 and its creators, nor is this project, in any way, for-profit. This is a
 project to teach myself `ply`.
