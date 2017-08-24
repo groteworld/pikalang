@@ -4,7 +4,6 @@ A [brainfuck][2] derivative based off the vocabulary of [Pikachu][3] from [Poké
 
 ![pikachu](images/shock.gif)
 
-**NOTE:** This project currently only creates a lexer object for the Pikalang file and then exits; full parsing is yet to come.
 
 Syntax
 ------
@@ -46,6 +45,24 @@ pikalang path/to/file.pokeball
 File Extention
 --------------
 A pikalang program must be stored in a file with a `.pokeball` extention
+
+
+API Usage
+---------
+```python
+import pikalang
+
+sourcecode = """
+    pi pi pi pi pi pi pi pi pi pi pika pipi pi pi pi pi pi pi pi pipi pi pi pi
+    pi pi pi pi pi pi pi pipi pi pi pi pipi pi pichu pichu pichu pichu ka chu
+    pipi pi pi pikachu pipi pi pikachu pi pi pi pi pi pi pi pikachu pikachu pi
+    pi pi pikachu pipi pi pi pikachu pichu pichu pi pi pi pi pi pi pi pi pi pi
+    pi pi pi pi pi pikachu pipi pikachu pi pi pi pikachu ka ka ka ka ka ka
+    pikachu ka ka ka ka ka ka ka ka pikachu pipi pi pikachu pipi pikachu
+    """
+
+pikalang.evaluate(sourcecode)
+```
 
 
 Disclaimer
