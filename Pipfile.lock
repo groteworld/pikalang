@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "16ea04a7e1f6f0ce92c07d9f9744da0551b689a54476194cb1f67e5a30a9dae3"
+            "sha256": "f26392eb15d13b4ef6e72724edd946efbf8265db3a9cdef341b9c53bc6a96b9f"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
@@ -27,6 +27,15 @@
         ]
     },
     "default": {
+        "ply": {
+            "hashes": [
+                "sha256:096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce",
+                "sha256:00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3"
+            ],
+            "version": "==3.11"
+        }
+    },
+    "develop": {
         "appdirs": {
             "hashes": [
                 "sha256:d8b24664561d0d34ddfaec54636d502d7cea6e29c3eaf68f3df6180863e2166e",
@@ -69,13 +78,6 @@
             ],
             "version": "==0.6.1"
         },
-        "ply": {
-            "hashes": [
-                "sha256:096f9b8350b65ebd2fd1346b12452efe5b9607f7482813ffca50c22722a807ce",
-                "sha256:00c7c1aaa88358b9c765b6d3000c6eec0ba42abca5351b095321aef446081da3"
-            ],
-            "version": "==3.11"
-        },
         "pycodestyle": {
             "hashes": [
                 "sha256:cbc619d09254895b0d12c2c691e237b2e91e9b2ecf5e84c26b35400f93dcfb83",
@@ -84,34 +86,12 @@
             ],
             "version": "==2.4.0"
         },
-        "pydocstyle": {
-            "hashes": [
-                "sha256:2258f9b0df68b97bf3a6c29003edc5238ff8879f1efb6f1999988d934e432bd8",
-                "sha256:ed79d4ec5e92655eccc21eb0c6cf512e69512b4a97d215ace46d17e4990f2039",
-                "sha256:5741c85e408f9e0ddf873611085e819b809fca90b619f5fd7f34bd4959da3dd4"
-            ],
-            "version": "==3.0.0"
-        },
         "pyflakes": {
             "hashes": [
                 "sha256:f661252913bc1dbe7fcfcbf0af0db3f42ab65aabd1a6ca68fe5d466bace94dae",
                 "sha256:9a7662ec724d0120012f6e29d6248ae3727d821bba522a0e6b356eff19126a49"
             ],
             "version": "==2.0.0"
-        },
-        "six": {
-            "hashes": [
-                "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
-                "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
-            ],
-            "version": "==1.12.0"
-        },
-        "snowballstemmer": {
-            "hashes": [
-                "sha256:9f3bcd3c401c3e862ec0ebe6d2c069ebc012ce142cce209c098ccb5b09136e89",
-                "sha256:919f26a68b2c17a7634da993d91339e288964f93c274f1343e3bbbe2096e1128"
-            ],
-            "version": "==1.2.1"
         },
         "toml": {
             "hashes": [
@@ -121,6 +101,5 @@
             ],
             "version": "==0.10.0"
         }
-    },
-    "develop": {}
+    }
 }

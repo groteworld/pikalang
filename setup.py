@@ -19,15 +19,10 @@ if __name__ == "__main__":
         py_modules=[
             "pikalang",
             "pikalang.cli",
-            "pikalang.lexer",
-            "pikalang.parser",
-            "pikalang.objects",
-            "pikalang.objects.loop",
-            "pikalang.objects.commands",
-            "pikalang.objects.command",
+            "pikalang.interpreter",
             "setup",
         ],
-        install_requires=["ply"],
+        install_requires=["sly"],
         entry_points={"console_scripts": ["pikalang = pikalang.cli:main"]},
         classifiers=[
             "Development Status :: 4 - Beta",

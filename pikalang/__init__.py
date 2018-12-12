@@ -10,27 +10,7 @@ Copyright (c) 2019 Blake Grotewold
 import sys
 import os
 
-from pikalang.parser import PikalangParser
-
-MAX_LOCATIONS = 20
-
-class PikalangProgram:
-    def __init__(self, source):
-        self.source = source
-        self.parser = PikalangParser()
-        self.data = [0] * MAX_LOCATIONS
-        self.location = 0
-
-    def run(self):
-        commands = self.parse()
-        commands.run(self)
-
-    def parse(self):
-        return self.parser.parse(self.source)
-
-    def __str__(self):
-        return str(self.parse(self.source))
-
+from pikalang.interpreter import PikalangProgram
 
 def load_source(file):
     if os.path.isfile(file):

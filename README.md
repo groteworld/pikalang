@@ -81,6 +81,9 @@ pipenv run flake8 pikalang --max-line-length=100
 pipenv run python -m pikalang tests/hello-world.pokeball
 ```
 
+Thanks
+------
+Special thanks to [Elliot Chance][5] for providing the base implementation of this.
 
 Disclaimer
 ----------
@@ -94,3 +97,4 @@ project to teach myself `ply`, which is protected under fair use.
 [2]: http://en.wikipedia.org/wiki/Brainfuck "Brainfuck"
 [3]: https://www.google.com/search?q=pikachu&tbm=isch "Pikachu"
 [4]: http://www.pokemon.com/ "Pokémon"
+[5]: http://elliot.land/post/write-your-own-brainfuck-interpreter "Elliot Chance"
