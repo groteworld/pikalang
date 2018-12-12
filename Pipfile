@@ -8,4 +8,3 @@ ply = "*"
 
 [dev-packages]
 black = "*"
-"flake8" = "*"
