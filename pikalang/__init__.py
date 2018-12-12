@@ -12,13 +12,14 @@ import os
 
 from pikalang.parser import PikalangParser
 
+MAX_LOCATIONS = 20
 
 class PikalangProgram:
     def __init__(self, source):
         self.source = source
 
     def run(self):
-        self.data = [0] * 20
+        self.data = [0] * MAX_LOCATIONS
         self.location = 0
         commands = self.parse(self.source)
         commands.run(self)
