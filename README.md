@@ -1,9 +1,11 @@
-pikalang
-========
+<h1 align="center">
+<p>PIKALANG - The Pikachu Programming Language</p>
+<br>
+<img style="margin-bottom:-14px" src="images/shock.gif" />
+<br>
+</h1>
+
 A [brainfuck][2] derivative based off the vocabulary of [Pikachu][3] from [Pokémon][4].
-
-![pikachu](images/shock.gif)
-
 
 Syntax
 ------
@@ -70,7 +72,7 @@ Disclaimer
 This is a fan-based parody of themes from [Pokémon][3]. The language,
 as well as its author, is in no way associated with the Pokémon francise
 and its creators, nor is this project, in any way, for-profit. This is a
-project to teach myself `ply`.
+project to teach myself `ply`, which is protected under fair use.
 
 
 [1]: http://esolangs.org/wiki/Pikalang
