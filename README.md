@@ -75,8 +75,7 @@ When developing, use `pipenv` to install needed tools.
 ```sh
 pipenv install
 
-pipenv run black pikalang
-pipenv run flake8 pikalang --max-line-length=100
+pipenv run black .
 
 pipenv run python -m pikalang tests/hello-world.pokeball
 ```
