@@ -57,10 +57,7 @@ class PikalangLexer(object):
     def input(self, data):
         self.lexer.input(data)
 
-    def test(self,data):
-        self.lexer.input(data)
-        while True:
-            tok = self.lexer.token()
-            if not tok:
-                break
+    def test(self, data):
+        self.input(data)
+        for tok in self:
             print(tok)

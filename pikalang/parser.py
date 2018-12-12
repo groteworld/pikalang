@@ -24,8 +24,11 @@ class PikalangParser(object):
         self.lexer = PikalangLexer()
         self.parser = yacc.yacc(module=self, write_tables=False, debug=False, **kwargs)
 
+    def build(self, **kwargs):
+        self.parser = yacc.yacc(module=self, write_tables=False, debug=False, **kwargs)
+
     def parse(self, text):
-        return self.parser.parse(text, self.lexer)
+        return self.parser.parse(text)
 
     def p_command(self, p):
         """

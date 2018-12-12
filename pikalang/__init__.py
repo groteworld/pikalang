@@ -18,15 +18,15 @@ class PikalangProgram:
     def __init__(self, source):
         self.source = source
         self.parser = PikalangParser()
-
-    def run(self):
         self.data = [0] * MAX_LOCATIONS
         self.location = 0
-        commands = self.parse(self.source)
+
+    def run(self):
+        commands = self.parse()
         commands.run(self)
 
-    def parse(self, source):
-        return self.parser.parse(source)
+    def parse(self):
+        return self.parser.parse(self.source)
 
     def __str__(self):
         return str(self.parse(self.source))
