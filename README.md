@@ -63,7 +63,22 @@ sourcecode = """
     pikachu ka ka ka ka ka ka ka ka pikachu pipi pi pikachu pipi pikachu
     """
 
+# or use sourcecode = pikalang.load_source("FILENAME.pokeball") to load from file
+
 pikalang.evaluate(sourcecode)
+```
+
+Development
+-----------
+When developing, use `pipenv` to install needed tools.
+
+```sh
+pipenv install
+
+pipenv run black pikalang
+pipenv run flake8 pikalang --max-line-length=100
+
+pipenv run python -m pikalang tests/hello-world.pokeball
 ```
 
 

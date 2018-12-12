@@ -26,26 +26,21 @@ def main():
     )
 
     arg_parser.add_argument(
-        "-v", "--version", action="version", version="%(prog)s {0}".format(setup.__VERSION__)
+        "-v",
+        "--version",
+        action="version",
+        version="%(prog)s {0}".format(setup.__VERSION__),
     )
     arg_parser.add_argument("file", help="the path to the pokeball file")
 
     args = arg_parser.parse_args()
 
-    if os.path.isfile(args.file):
-        if os.path.splitext(args.file)[1] == ".pokeball":
-            with open(args.file, "r") as pikalang_file:
-                pikalang_data = pikalang_file.read()
+    sourcecode = pikalang.load_source(args.file)
 
-            pikalang.evaluate(pikalang_data)
-
-        else:
-            arg_parser.print_usage()
-            print("pikalang: file is not a pokeball", file=sys.stderr)
-
+    if sourcecode:
+        pikalang.evaluate(sourcecode)
     else:
         arg_parser.print_usage()
-        print("pikalang: file does not exist", file=sys.stderr)
 
 
 if __name__ == "__main__":
