@@ -34,7 +34,6 @@ class PikalangLexer(object):
     t_DECREMENTBYTE = r"ka"
     t_JUMPFORWARD = r"pika"
     t_JUMPBACKWARD = r"chu"
-
     t_IGNORE = r"[ \t]+"
 
     def t_newline(self, t):
@@ -42,7 +41,7 @@ class PikalangLexer(object):
         t.lexer.lineno += len(t.value)
 
     def t_error(self, t):
-        print("Illegal character {}".format(t.value[0]))
+        print("Illegal character: {}".format(t.value[0]))
         t.lexer.skip(1)
 
     def __init__(self, **kwargs):
@@ -57,3 +56,11 @@ class PikalangLexer(object):
 
     def input(self, data):
         self.lexer.input(data)
+
+     def test(self,data):
+         self.lexer.input(data)
+         while True:
+              tok = self.lexer.token()
+              if not tok:
+                  break
+              print(tok)
