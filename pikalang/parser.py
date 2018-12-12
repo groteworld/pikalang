@@ -43,15 +43,11 @@ class PikalangParser(object):
         else:
             p[0] = p[1]
 
-        return p[0]
-
     def p_loop(self, p):
         """
         loop : JUMPFORWARD commands JUMPBACKWARD
         """
         p[0] = Loop(p[2])
-
-        return p[0]
 
     def p_commands(self, p):
         """
@@ -68,8 +64,5 @@ class PikalangParser(object):
         p[1].commands.append(p[2])
         p[0] = p[1]
 
-        return p[0]
-
     def p_error(self, p):
         print("Syntax error in input:", p)
-        return p
