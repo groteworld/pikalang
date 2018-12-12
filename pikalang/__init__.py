@@ -7,6 +7,8 @@ A brainfuck derivative based off the vocabulary of Pikachu from Pokemon.
 Copyright (c) 2019 Blake Grotewold
 """
 
+from __future__ import print_function
+
 import sys
 import os
 
