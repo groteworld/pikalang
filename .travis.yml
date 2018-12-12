@@ -1,22 +1,19 @@
 language: "python"
 
 python:
+   - "2.6"
    - "2.7"
    - "3.3"
    - "3.4"
    - "3.5"
    - "3.6"
+   - "3.7"
    - "pypy"
    - "pypy3"
 
 install:
-   - pip install pipenv
-   - pipenv install --dev
-
-before_script:
-   - pipenv run black .
+   - python setup.py install
 
 script:
-   - python setup.py install
    - pikalang --version
-   - pikalang test/hello-world.pokeball
+   - pikalang tests/hello-world.pokeball
