@@ -8,15 +8,8 @@ Copyright (c) 2019 Blake Grotewold
 """
 import sys
 
+from pikalang.lexer import PikalangLexer
 from pikalang.objects.loop import Loop
-
-from pikalang.rules import (
-    t_INCREMENTBYTE,
-    t_INCREMENTPOINTER,
-    t_DECREMENTBYTE,
-    t_DECREMENTPOINTER,
-    t_OUTPUT,
-)
 
 
 class Command:
@@ -29,15 +22,15 @@ class Command:
         if isinstance(self.command, Loop):
             self.command.run(program)
 
-        if self.command == t_INCREMENTBYTE:
+        if self.command == PikalangLexer.t_INCREMENTBYTE:
             program.data[program.location] += 1
-        if self.command == t_DECREMENTBYTE:
+        if self.command == PikalangLexer.t_DECREMENTBYTE:
             program.data[program.location] -= 1
-        if self.command == t_DECREMENTPOINTER:
+        if self.command == PikalangLexer.t_DECREMENTPOINTER:
             program.location -= 1
-        if self.command == t_INCREMENTPOINTER:
+        if self.command == PikalangLexer.t_INCREMENTPOINTER:
             program.location += 1
-        if self.command == t_OUTPUT:
+        if self.command == PikalangLexer.t_OUTPUT:
             sys.stdout.write(chr(program.data[program.location]))
 
     def __str__(self):

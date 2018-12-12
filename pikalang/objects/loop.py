@@ -7,7 +7,7 @@ The Loop classes used in pikalang
 Copyright (c) 2019 Blake Grotewold
 """
 
-from pikalang.rules import t_JUMPFORWARD, t_JUMPBACKWARD
+from pikalang.lexer import PikalangLexer
 
 
 class Loop:
@@ -21,4 +21,8 @@ class Loop:
             self.commands.run(program)
 
     def __str__(self):
-        return t_JUMPFORWARD + str(self.commands) + t_JUMPBACKWARD
+        return (
+            PikalangLexer.t_JUMPFORWARD
+            + str(self.commands)
+            + PikalangLexer.t_JUMPBACKWARD
+        )
