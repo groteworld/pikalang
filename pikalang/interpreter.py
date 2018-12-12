@@ -1,3 +1,5 @@
+from __future__ import print_function
+
 import sys
 import ply.yacc as yacc
 import ply.lex as lex
@@ -84,7 +86,7 @@ class PikalangProgram:
 
     def parse(self, source):
         lexer = lex.lex()
-        parser = yacc.yacc()
+        parser = yacc.yacc(debug=False, write_tables=False)
         return parser.parse(source)
 
     def __str__(self):
