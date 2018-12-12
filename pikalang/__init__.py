@@ -14,6 +14,7 @@ import os
 
 from pikalang.interpreter import PikalangProgram
 
+
 def load_source(file):
     if os.path.isfile(file):
         if os.path.splitext(file)[1] == ".pokeball":

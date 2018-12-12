@@ -16,12 +16,7 @@ if __name__ == "__main__":
         author="Blake Grotewold",
         author_email="hello@grote.world",
         url="https://github.com/grotewold/pikalang",
-        py_modules=[
-            "pikalang",
-            "pikalang.cli",
-            "pikalang.interpreter",
-            "setup",
-        ],
+        py_modules=["pikalang", "pikalang.cli", "pikalang.interpreter", "setup"],
         install_requires=["sly"],
         entry_points={"console_scripts": ["pikalang = pikalang.cli:main"]},
         classifiers=[

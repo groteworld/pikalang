@@ -5,33 +5,37 @@ import ply.yacc as yacc
 import ply.lex as lex
 
 tokens = (
-    'INCREMENT',
-    'DECREMENT',
-    'SHIFT_LEFT',
-    'SHIFT_RIGHT',
-    'OUTPUT',
-    'INPUT',
-    'OPEN_LOOP',
-    'CLOSE_LOOP',
+    "INCREMENT",
+    "DECREMENT",
+    "SHIFT_LEFT",
+    "SHIFT_RIGHT",
+    "OUTPUT",
+    "INPUT",
+    "OPEN_LOOP",
+    "CLOSE_LOOP",
 )
 
-t_INCREMENT   = r'pi'
-t_DECREMENT   = r'ka'
-t_SHIFT_LEFT  = r'pipi'
-t_SHIFT_RIGHT = r'pichu'
-t_OUTPUT      = r'pikachu'
-t_INPUT       = r'pikapi'
-t_OPEN_LOOP   = r'pika'
-t_CLOSE_LOOP  = r'chu'
+t_INCREMENT = r"pi"
+t_DECREMENT = r"ka"
+t_SHIFT_LEFT = r"pipi"
+t_SHIFT_RIGHT = r"pichu"
+t_OUTPUT = r"pikachu"
+t_INPUT = r"pikapi"
+t_OPEN_LOOP = r"pika"
+t_CLOSE_LOOP = r"chu"
+
 
 def t_newline(t):
-    r'\n+'
+    r"\n+"
     t.lexer.lineno += len(t.value)
 
-t_ignore = ' \t'
+
+t_ignore = " \t"
+
 
 def t_error(t):
     t.lexer.skip(1)
+
 
 def p_commands(p):
     """
@@ -49,6 +53,7 @@ def p_commands(p):
     p[1].commands.append(p[2])
     p[0] = p[1]
 
+
 def p_command(p):
     """
     command : INCREMENT
@@ -64,11 +69,13 @@ def p_command(p):
     else:
         p[0] = p[1]
 
+
 def p_loop(p):
     """
     loop : OPEN_LOOP commands CLOSE_LOOP
     """
     p[0] = Loop(p[2])
+
 
 def p_error(p):
     print("Syntax error in input!")
@@ -92,6 +99,7 @@ class PikalangProgram:
     def __str__(self):
         return str(self.parse(self.source))
 
+
 class Commands:
     def __init__(self):
         self.commands = []
@@ -101,7 +109,8 @@ class Commands:
             command.run(program)
 
     def __str__(self):
-        return ''.join([str(command) for command in self.commands])
+        return "".join([str(command) for command in self.commands])
+
 
 class Command:
     def __init__(self, command):
@@ -124,6 +133,7 @@ class Command:
 
     def __str__(self):
         return self.command
+
 
 class Loop:
     def __init__(self, commands):
