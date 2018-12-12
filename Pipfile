@@ -10,6 +10,7 @@ name = "pypi"
 black = "*"
 "flake8" = "*"
 pydocstyle = "*"
+ply = "*"
 
 
 [dev-packages]
