@@ -7,11 +7,12 @@ The lexer for pikalang.
 Copyright (c) 2019 Blake Grotewold
 """
 
+from __future__ import print_function
+
 import ply.lex as lex
 
-class PikalangLexer(object):
-    """Token lexer for Pikalang."""
 
+class PikalangLexer(object):
     tokens = (
         "DECREMENTPOINTER",
         "INCREMENTPOINTER",
@@ -21,14 +22,8 @@ class PikalangLexer(object):
         "DECREMENTBYTE",
         "JUMPFORWARD",
         "JUMPBACKWARD",
-        "COMMENT",
         "IGNORE",
     )
-
-    def __init__(self, **kwargs):
-        """Build the lexer."""
-        self.lexer = lex.lex(module=self, **kwargs)
-        self.lexer.linestart = 0
 
     # Regular expression rules for tokens
     t_DECREMENTPOINTER = r"pichu"
@@ -39,22 +34,20 @@ class PikalangLexer(object):
     t_DECREMENTBYTE = r"ka"
     t_JUMPFORWARD = r"pika"
     t_JUMPBACKWARD = r"chu"
-    t_COMMENT = r"[^\s]+"
 
-    t_IGNORE = "[ \t\n\r]"
+    t_IGNORE = r"[ \t]+"
 
     def t_newline(self, t):
-        """Token for line numbers.
-
-        This allows us to keep track of what line number for error reporting.
-        """
-        r"\n+"
+        r"[\n\r]+"
         t.lexer.lineno += len(t.value)
 
     def t_error(self, t):
-        """Error handling rule."""
         print("Illegal character {}".format(t.value[0]))
         t.lexer.skip(1)
+
+    def __init__(self, **kwargs):
+        self.lexer = lex.lex(module=self, **kwargs)
+        self.lexer.linestart = 0
 
     def __iter__(self):
         return iter(self.lexer)

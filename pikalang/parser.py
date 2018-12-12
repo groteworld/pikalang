@@ -7,6 +7,8 @@ The parser for pikalang tokens.
 Copyright (c) 2019 Blake Grotewold
 """
 
+from __future__ import print_function
+
 import ply.yacc as yacc
 
 from pikalang.lexer import PikalangLexer
@@ -16,12 +18,14 @@ from pikalang.objects.command import Command
 
 
 class PikalangParser(object):
-
     tokens = PikalangLexer.tokens
 
     def __init__(self, **kwargs):
         self.lexer = PikalangLexer()
         self.parser = yacc.yacc(module=self, **kwargs)
+
+    def parse(self, text):
+        return self.parser.parse(text, self.lexer)
 
     def p_command(self, p):
         """
@@ -39,11 +43,15 @@ class PikalangParser(object):
         else:
             p[0] = p[1]
 
+        return p[0]
+
     def p_loop(self, p):
         """
         loop : JUMPFORWARD commands JUMPBACKWARD
         """
         p[0] = Loop(p[2])
+
+        return p[0]
 
     def p_commands(self, p):
         """
@@ -60,15 +68,8 @@ class PikalangParser(object):
         p[1].commands.append(p[2])
         p[0] = p[1]
 
-    def p_comment(self, p):
-        """
-        comment : COMMENT
-                | IGNORE
-        """
-        pass
+        return p[0]
 
     def p_error(self, p):
-        print("Syntax error in input!")
-
-    def parse(self, text):
-        return self.parser.parse(text, self.lexer)
+        print("Syntax error in input:", p)
+        return p

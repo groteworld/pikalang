@@ -25,7 +25,8 @@ if __name__ == "__main__":
             "pikalang.objects.loop",
             "pikalang.objects.commands",
             "pikalang.objects.command",
-            "setup"],
+            "setup",
+        ],
         install_requires=["ply"],
         entry_points={"console_scripts": ["pikalang = pikalang.cli:main"]},
         classifiers=[
