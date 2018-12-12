@@ -3,3 +3,5 @@ build
 dist
 *.py[co]
 *.egg-info
+parsetab.py
+parser.out
