@@ -17,6 +17,7 @@ MAX_LOCATIONS = 20
 class PikalangProgram:
     def __init__(self, source):
         self.source = source
+        self.parser = PikalangParser()
 
     def run(self):
         self.data = [0] * MAX_LOCATIONS
@@ -25,8 +26,7 @@ class PikalangProgram:
         commands.run(self)
 
     def parse(self, source):
-        parser = PikalangParser()
-        return parser.parse(source)
+        return self.parser.parse(source)
 
     def __str__(self):
         return str(self.parse(self.source))
