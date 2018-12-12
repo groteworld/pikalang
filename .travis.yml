@@ -10,12 +10,13 @@ python:
    - "pypy3"
 
 install:
-   - pip install flake8
-   - pip install pydocstyle
+   - pip install pipenv
+   - pipenv install
 
 before_script:
-   - flake8 .
+   - pipenv run black .
 
 script:
    - python setup.py install
    - pikalang --version
+   - pikalang test/hello-world.pokeball
