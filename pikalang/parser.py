@@ -22,7 +22,7 @@ class PikalangParser(object):
 
     def __init__(self, **kwargs):
         self.lexer = PikalangLexer()
-        self.parser = yacc.yacc(module=self, **kwargs)
+        self.parser = yacc.yacc(module=self, write_tables=False, debug=False, **kwargs)
 
     def parse(self, text):
         return self.parser.parse(text, self.lexer)
@@ -35,6 +35,7 @@ class PikalangParser(object):
                 | INCREMENTPOINTER
                 | OUTPUT
                 | INPUT
+                | IGNORE
                 | loop
         """
 
